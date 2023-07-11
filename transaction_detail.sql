@@ -1,0 +1,12 @@
+
+INSERT INTO t27 VALUES(300, 'milan'); -- 自动提交 commit
+
+SELECT * FROM t27
+
+START TRANSACTION 
+INSERT INTO t27 VALUES(400, 'king');
+INSERT INTO t27 VALUES(500, 'scott');
+ROLLBACK -- 表示直接回退到事务开始的的状态
+COMMIT;
+
+
