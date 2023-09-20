@@ -1,0 +1,34 @@
+intex25.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // (搜索时用)节流
+
+        function throttle(fn,delay){
+            var valid = true;
+            return function(){
+                if(!valid){
+                    return false;
+                }
+                valid = false;
+                setTimeout(function(){
+                    fn();
+                    valid = ture;
+                },delay)
+            }
+        }
+        window.onscroll = debounce(scrollHandle,2000)
+
+function scrollHandle(){
+    var scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop);
+}
+    </script>
+</body>
+</html>

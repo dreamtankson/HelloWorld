@@ -1,0 +1,37 @@
+intex20.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout(function(){
+        //     console.log("大家好,3秒以后执行")
+        // },3000)
+
+
+
+        
+
+        // 取消定时器
+
+        // clearTimeout(timer)
+
+        var name = "iwen"
+        var user = {
+            name : "itbaizhan",
+            getName:function(){
+                var that = this
+                setTimeout(function(){
+                    console.log(that.name);
+                },1000)
+            }
+        }
+
+        user.name();
+    </script>
+</body>
+</html>
