@@ -1,0 +1,29 @@
+jquery9.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                // 我的兄弟变成红色 我本身不变颜色
+                $(this).siblings().css('color','red');
+            });
+        })
+    </script>
+</body>
+</html>
