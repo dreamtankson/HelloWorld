@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  商品を削除
+        $(".p-action a").click(function(){
+            $(this).parents(".cart-item").remove();
+            getSum();
+        });
+        // 選択した商品を削除する
+        $(".remove-batch").click(function(){
+            $(".j-checkbox:checked").parents(".cart-item").remove();
+            getsum();
+        });
+        // すべての商品を削除する
+        $(".clear-all").click(function(){
+            $(".cart-item").remove();
+            getSum();
+        })
+    
+
+
+
+    </script>
+    
+    
+</body>
+</html>

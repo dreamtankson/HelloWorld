@@ -1,0 +1,32 @@
+jquery28.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <ul>
+        <li>耗子尾汁</li>
+        <li>耗子尾汁</li>
+        <li>耗子尾汁</li>
+        <li>耗子尾汁</li>
+        <li>耗子尾汁</li>
+        
+    </ul>
+
+    <script>
+        // on可以实现事件委托
+        $("ul").on("click","li",function(){
+            alert(11);
+        });
+        $("ol").on("click", "li",function(){
+            alert(11);
+        })
+        var li = $("<li>我是后来创建的</li>");
+        $("ol").append(li);
+    </script>
+</body>
+</html>

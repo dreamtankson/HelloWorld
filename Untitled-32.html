@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    $(function(){
+            function $(ele) {
+                return document.queryelector(ele);
+            }
+            // $符号冲突就是用jQuery
+            console.log(($("div")));
+            // 让jQuery 释放对$ 控制权 让自己使用
+            jQuery.each = jQuery.noConflict();
+            console.log(suibian("span"));
+        })
+    </script>
+</body>
+</html>

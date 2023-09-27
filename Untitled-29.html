@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        $(function(){
+            // 自动触发事件
+            $("div").click();//1
+            $("div").trigger("click");//2
+            $("div").triggerHandler("click");//3
+        })
+    </script>
+</body>
+</html>
