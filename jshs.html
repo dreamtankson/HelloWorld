@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #58a;
+        }
+    </style>
+</head>
+<body>
+    <div id="ad"></div>
+    <script>
+        let ad = document.getElementById('ad');
+        ad.addEventListener("click",function(){
+
+
+            // 定时器
+            setTimeout(() => {
+                // 修改背景颜色
+                this.style.background = 'pink'
+            },2000);
+
+
+
+            // 从数组中返回偶数元素
+            const arr = [1,6,9,10,100,25];
+
+            const result = arr.filter(item => item% 2 ===0);
+
+            console.log(result);
+            // 箭头函数不适合与this有关的回调 
+
+            {
+                name:'马保国' ,
+                // getName:() =>{  如果用箭头函数就不是指向对象了 而是指向外层作用域的this值
+                    this.name;
+
+                }
+            }
+
+
+
+
+
+
+
+        );
+    </script>
+    
+</body>
+</html>

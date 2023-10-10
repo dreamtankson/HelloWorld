@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值</title>
+</head>
+<body>
+    <script>
+        // 对象的解构
+        const zhao = {
+            name: '赵本山',
+            age:'不详',
+            xiaopin:function(){
+                console.log("我可以演小品");
+            }
+        };
+
+
+        let {xiaopin} = zhao;
+        xiaopin();
+    </script>
+</body>
+</html>

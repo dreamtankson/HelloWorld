@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成器</title>
+</head>
+<body>
+    <script>
+        // 生成器就是一个特殊的函数
+        //  函数代码的分隔符
+        function * gen(){
+        console.log(111);
+        yield '有备而来';
+        console.log(222);
+        yield '耗子尾汁';
+        console.log(333);
+        yield '偷袭！';
+        console.log(444);
+    }
+
+    let iterator = gen();
+    iterator.next();
+    iterator.next();
+    iterator.next();
+    iterator.next();
+    
+    </script>
+</body>
+</html>

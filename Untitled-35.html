@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        body{
+            background-color: aquamarine;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+
+        }
+        #charl{
+            /* width: 100px;
+            height: 100px; */
+            background-color: red;
+            margin: auto;
+            border-radius: 85px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+        }
+        .my-span{
+            color:white;
+            font-size: 130px;
+            display: inline-block;
+            /*  添加样式数值在变化时的过度效果*/
+            transition: 1s;
+        }
+        /* 隐藏 */
+        .my-hide{
+            opacity: 0;
+            width: 0px;
+        }
+        /* 当鼠标悬浮在div上时 显示隐藏的span标签 */
+        #charl:hover>span.my-hide{
+            opacity: 1;
+            /* width: auto; */
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "charl">
+        <span class ="my-span">J</span>
+        <span class ="my-span my-hide">a</span>
+        <span class ="my-span my-hide">v</span>
+        <span class ="my-span my-hide">a</span>
+        <span class ="my-span">E</span>
+        <span class ="my-span my-hide">E</span>
+    </div>
+</body>
+</html>

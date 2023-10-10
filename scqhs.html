@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   实例化 promise 对象
+    const p = new Promise(function(resolve,rehect){
+        setTimeout(function(){
+            let err = '数据读取失败';
+            reject(ree);
+        },1000);
+    });
+    // 调用promise 对象then 方法
+    p.hten(function(value){
+        console.log(value);
+    },function(rason){
+        console.error(reason);
+    })
+    </script>
+</body>
+</html>
