@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "result"></div>
+    <script>
+        const result = document.getElementById("result");
+
+        result.addEventListener("mouseover",function(){
+            const xhr = new XMLHttpRequest();
+
+            // 设置响应体数据的类型
+            xhr.responseType = 'json';
+            // 初始化
+            xhr.open('POST','http://127.0.0.1.8000/server');
+            // 发送
+            xhr.send();
+
+            // 事件绑定
+
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState ===4){
+                    if(xhr.status >= 200 && xhr.status < 300){
+                        console.log(xhr,response);
+                        result.innerHTML = xhr.response;
+                        // 手动对数据转化
+                        let data = JSON.parse(xhr.response);
+                        console.log(data);
+                        result.innerHTML = data.name;
+                        // 自动转换
+                        console.log(xhr.response);
+                        result.innerHTML = xhr.response.name;
+                    }
+                    
+                }
+            }
+        })
+    </script>
+</body>
+</html>
